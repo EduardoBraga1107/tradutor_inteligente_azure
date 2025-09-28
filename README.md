@@ -1,4 +1,4 @@
-# 🚀 Tradutor Profissional de Arquivos com Azure AI
+# 🚀 Tradutor Profissional de Arquivos com Azure AI (v3.0 )
 
 Este projeto é uma aplicação web robusta, construída com Python e Streamlit, que utiliza o poder do **Azure AI Translator** para traduzir o conteúdo de arquivos de texto para diferentes idiomas.
 
@@ -31,7 +31,7 @@ Siga os passos abaixo para executar o projeto em sua máquina local.
 
 - **Python 3.7+** instalado.
 - Uma conta no **Microsoft Azure** com uma assinatura ativa.
-- Um recurso do **Serviço de Tradutor (Translator Service)** criado no Azure. Se não tiver um, [siga este guia para criar](https://learn.microsoft.com/pt-br/azure/ai-services/translator/translator-how-to-signup ).
+- Um recurso do **Serviço de Tradutor (Translator Service)** criado no Azure. Se não tiver um, [siga este guia para criar](https://learn.microsoft.com/pt-br/azure/ai-services/translator/quickstart-translator ).
 
 ### 2. Clone o Repositório
 
