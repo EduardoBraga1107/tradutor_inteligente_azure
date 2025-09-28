@@ -31,7 +31,7 @@ Siga os passos abaixo para executar o projeto em sua máquina local.
 
 - **Python 3.7+** instalado.
 - Uma conta no **Microsoft Azure** com uma assinatura ativa.
-- Um recurso do **Serviço de Tradutor (Translator Service)** criado no Azure. Se não tiver um, [siga este guia para criar](https://learn.microsoft.com/pt-br/azure/ai-services/translator/quickstart-translator ).
+- Um recurso do **Serviço de Tradutor (Translator Service)** criado no Azure. Se não tiver um, [siga este guia para criar](https://learn.microsoft.com/pt-br/azure/ai-services/translator/quickstart-translator?tabs=python ).
 
 ### 2. Clone o Repositório
 
@@ -106,4 +106,3 @@ Seu navegador abrirá automaticamente com a aplicação rodando! Agora você pod
 **Conecte-se comigo:**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white )](https://www.linkedin.com/in/eduardo-braga-ribeiro-781254237/ )
-
