@@ -72,22 +72,38 @@ pip install -r requirements.txt
 ```
 Após a ativação, o nome do ambiente (`venv` ) aparecerá no prompt do seu terminal, indicando que ele está ativo.
 
-### **Passo 4: Gerenciamento de Credenciais (Variáveis de Ambiente)**
+### **Passo 4: Gerenciamento de Credenciais com Variáveis de Ambiente (Passo Crucial de Segurança)**
 
-Credenciais de API são informações sensíveis e não devem ser codificadas diretamente no código-fonte (hardcoding). A abordagem correta é gerenciá-las através de variáveis de ambiente.
+Esta é uma das etapas mais importantes para garantir que seu projeto seja seguro e profissional.
 
-1.  Na raiz do projeto, crie um arquivo chamado `.env`. Este arquivo será ignorado pelo Git (conforme definido no `.gitignore`), garantindo que seus segredos não sejam enviados para o repositório público.
-2.  Adicione as seguintes variáveis ao arquivo `.env`, substituindo os placeholders pelas suas credenciais reais do Azure:
+#### **O Porquê: Por que não colocar as chaves direto no código?**
+
+As suas credenciais da API do Azure (chave, endpoint, etc.) são como a senha do seu banco. Se você as coloca diretamente no código (uma prática chamada "hardcoding"), qualquer pessoa que veja seu código no GitHub terá acesso total ao seu recurso do Azure. Isso pode levar a usos indevidos e custos inesperados na sua conta.
+
+A solução profissional é separar as "configurações" (que podem ser públicas) do "código" (que pode ser público) dos "segredos" (que devem ser sempre privados). Fazemos isso usando **Variáveis de Ambiente**.
+
+Neste projeto, usamos um arquivo `.env` para simular esse comportamento em um ambiente de desenvolvimento local. Este arquivo funciona como um "cofre de senhas" que só existe no seu computador. Nosso código é inteligente o suficiente para abrir este cofre e pegar as senhas quando precisa, sem que elas estejam escritas no código principal.
+
+#### **O Como: Configurando o seu cofre local (`.env`)**
+
+1.  **Crie o Cofre:** Na pasta principal do projeto (a mesma onde está o `app.py`), crie um novo arquivo de texto e salve-o com o nome exato de **`.env`**.
+
+2.  **Guarde seus Segredos:** Abra o arquivo `.env` e cole o conteúdo abaixo. Em seguida, substitua os textos de exemplo pelas suas credenciais reais que você pegou no portal do Azure.
 
     ```env
-    # Arquivo .env
+    # Arquivo .env - Este arquivo é o seu cofre local e NUNCA deve ser enviado para o GitHub.
+
     TRANSLATOR_KEY="SUA_CHAVE_DA_API_AQUI"
     TRANSLATOR_ENDPOINT="SEU_ENDPOINT_AQUI"
     TRANSLATOR_LOCATION="SUA_REGIAO_AQUI"
     ```
-    *   **TRANSLATOR_KEY:** A chave de assinatura para autenticação na API.
-    *   **TRANSLATOR_ENDPOINT:** A URL base para todas as chamadas da API.
-    *   **TRANSLATOR_LOCATION:** A região do Azure onde seu recurso está hospedado.
+    *   **TRANSLATOR_KEY:** A "senha" para se autenticar na API. É a credencial mais crítica.
+    *   **TRANSLATOR_ENDPOINT:** O "endereço de internet" do serviço de tradução. Diz ao nosso código para onde enviar as solicitações.
+    *   **TRANSLATOR_LOCATION:** A "região geográfica" (ex: `eastus`, `brazilsouth`) onde seu recurso está hospedado. É necessária para algumas APIs do Azure.
+
+3.  **Garanta a Segurança:** O arquivo `.gitignore` que já está no projeto tem uma linha que diz para o Git ignorar o arquivo `.env`. Isso garante que, mesmo que você tente, não enviará acidentalmente seus segredos para o repositório público.
+
+Com isso, seu código permanece limpo e seguro, enquanto suas credenciais ficam protegidas no seu ambiente local.
 
 ### **Passo 5: Execução da Aplicação**
 
@@ -120,5 +136,3 @@ O Streamlit iniciará um servidor web local e abrirá automaticamente uma aba no
 </table>
 
 **Conecte-se comigo:**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white )](https://www.linkedin.com/in/eduardo-braga-ribeiro-781254237/ )
