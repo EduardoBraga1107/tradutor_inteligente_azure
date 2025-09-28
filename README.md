@@ -1,4 +1,4 @@
-# 🚀 Tradutor Profissional de Arquivos com Azure AI (v3.0 )
+# 🚀 Tradutor Profissional de Arquivos com Azure AI
 
 Este projeto é uma aplicação web robusta, construída com Python e Streamlit, que utiliza o poder do **Azure AI Translator** para traduzir o conteúdo de arquivos de texto para diferentes idiomas.
 
@@ -106,3 +106,4 @@ Seu navegador abrirá automaticamente com a aplicação rodando! Agora você pod
 **Conecte-se comigo:**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white )](https://www.linkedin.com/in/eduardo-braga-ribeiro-781254237/ )
+
