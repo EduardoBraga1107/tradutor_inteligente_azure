@@ -136,3 +136,5 @@ O Streamlit iniciará um servidor web local e abrirá automaticamente uma aba no
 </table>
 
 **Conecte-se comigo:**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white )](https://www.linkedin.com/in/eduardo-braga-ribeiro-781254237/ )
